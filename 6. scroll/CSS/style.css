@@ -1,0 +1,41 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #efedd6;
+    overflow-x:hidden ;
+}
+h1 {
+    margin: 20px;
+}
+.box {
+    width:400px;
+    height:200px;
+    background-color: aqua;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:10px 0;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.238);
+    transform: translateX(200%);
+      /* transform translateX მოძრაობს X ღერძის მიმართ როგორც მათემატიკაში 
+    - სისას მარცხნივ გადაადგილდება და მიზანი არის რომ თავდაპირველად არ იყოს ცენტრში ანუ არ ჩანდეს შესაბამისად 200% */
+    transition:transform 0.4s ease;
+}
+.box:nth-of-type(even) {
+    transform: translateX(-200%);
+    /* ამით ყოველი მეორე მარცხნივ იქნება და მარცხნიდან შემოვა შემდეგ  */
+}
+.box.show {
+    transform: translateX(0)
+}
+h2 {
+    font-size:40px;
+}

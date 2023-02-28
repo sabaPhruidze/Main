@@ -1,0 +1,107 @@
+@font-face {
+  font-family: roboto;
+  src: url(../Assets/font/Roboto-Medium.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: roboto;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+}
+.container.hover-left .left {
+  width: 75%;
+}
+.container.hover-left .right {
+  width: 25%;
+}
+.container.hover-right .right {
+  width: 75%;
+}
+.container.hover-right .left {
+  width: 25%;
+}
+.container .split {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+.container .split h1 {
+  font-size: 4rem;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+.container .split .btn {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translateX(-50%);
+  text-decoration: none;
+  color: white;
+  border: 0.2rem solid white;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 15rem;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .split.left {
+  left: 0;
+  background: url("../Assets/img/ps5 1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+}
+.container .split.left::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(87, 84, 236, 0.7);
+}
+.container .split.left .btn:hover {
+  background-color: rgb(87, 84, 236);
+  border-color: rgb(87, 84, 236);
+}
+.container .split.right {
+  right: 0;
+  background: url(../Assets/img/xbox\ 1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+}
+.container .split.right::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(43, 43, 43, 0.8);
+}
+.container .split.right .btn:hover {
+  background-color: rgb(28, 122, 28);
+  border-color: rgb(28, 122, 28);
+}
+
+.split.right, .split.left, .split.right::before, .split.left::before {
+  transition: all 1000ms ease-in-out;
+}/*# sourceMappingURL=style.css.map */

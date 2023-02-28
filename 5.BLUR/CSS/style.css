@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'nateli';
+    src: url(../assets/fonts/1/bpg-classic-medium-webfont.ttf);
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body {
+    width:100vw;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.bg {
+    background-image: url(../assets/img/avengers1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100vw;
+    position:absolute;
+    top:-50px;
+    left:-50px;
+    width:calc(100vw + 100px);
+    height:calc(100vh + 100px);
+    /* the reason of top and left and width and height is to cover the most part of white effect during the blur mode */
+    z-index:-1;
+    filter:blur(0px);
+    /* blur effect will change by using JS */
+}
+.loading-text {
+    font-family: 'nateli';
+    font-size:50px;
+    color:white;
+    font-weight: 1000;
+}

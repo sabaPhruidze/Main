@@ -1,0 +1,93 @@
+@font-face {
+    font-family: 'Fredoka One';
+    src: url(../assets/fonts/FredokaOne-Regular.ttf);
+}
+:root {
+    --unactive-color:#e0e0e0;
+    --active-color:#3498db;
+}
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #f6f7fb;
+    font-family: 'Fredoka One', cursive;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.container {
+    text-align:center;
+}
+.progressive-container {
+    display:flex;
+    justify-content:space-between;
+    position:relative;
+    margin-bottom: 30px;
+    max-width:100%;
+    width:350px;
+}
+/* დანიშნულება არის ნაცისფერი ზოლი რომ იყოს */
+.progressive-container::before {
+    content: '';
+    background-color: var(--unactive-color);
+    position: absolute;
+    top:50%;
+    left:0;
+    transform: translateY(-50%);
+    height:4px;
+    width: 100%;
+    z-index: -1;
+    transition: 0.4s ease;
+}
+/* გადაფარავს progressive-container::before ს  */
+.progress {
+    background-color: var(--active-color);
+    position: absolute;
+    top:50%;
+    left:0;
+    transform: translateY(-50%);
+    height:4px;
+    width: 0%;
+    z-index: -1;
+    transition: 0.4s ease;
+}
+.circle {
+    background-color: #fff;
+    color:#999;
+    border-radius: 50%;
+    width:30px;
+    height:30px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border:3px var(--unactive-color) solid;
+    transition: .4s ease;
+}
+.circle.active {
+    border-color:var(--active-color);
+}
+.btn {
+    background-color: var(--active-color);
+    color: white;
+    border: 0;
+    cursor:pointer;
+    font-family: inherit;
+    padding:8px 30px;
+    margin:5px;
+    font-size:14px;
+}
+.btn:active {
+transform:  scale(0.98);
+}
+.btn:focus {
+    outline:  0;
+}
+.btn:disabled {
+    background-color: var(--unactive-color);
+    cursor:not-allowed;
+}

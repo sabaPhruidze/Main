@@ -1,0 +1,136 @@
+$left-bg-color:rgba(87, 84, 236, 0.7);
+$right-bg-color:rgba(43, 43, 43, 0.8);
+$left-btn-hover-color: rgba(87, 84, 236, 1);
+$right-btn-hover-color: rgba(28, 122, 28, 1);
+$hover-width: 75%;
+$other-width: 25%;
+$speed:1000ms;
+
+
+
+@font-face {
+    font-family: roboto;
+    src: url(../Assets/font/Roboto-Medium.ttf);
+}
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body {
+    font-family: roboto;
+    height:100vh;
+    width:100vw;
+    overflow: hidden;
+}
+.container {
+    position:relative;
+    width:100%;
+    height:100%;
+    background-color: #333;
+    &.hover-left {
+        .left {
+            width:$hover-width;
+        }
+        .right {
+            width:$other-width;
+        }
+    }
+    &.hover-right {
+        .right {
+            width:$hover-width;
+        }
+        .left {
+            width:$other-width;
+        }
+    }
+    .split {
+        position:absolute;
+        width:50%;
+        height:100%;
+        overflow:hidden;
+        h1 {
+            font-size:4rem;
+            color:#fff;
+            position:absolute;
+            left:50%;
+            top:20%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+            // nowwrap ით აღარ გადავა შემდეგ ხაზზე ჩაწერილი h1 თი
+        }
+        .btn {
+            position:absolute;
+            left:50%;
+            top:40%;
+            transform: translateX(-50%);
+            text-decoration:none;
+            color:white;
+            border:0.2rem solid white;
+            font-size:1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            width: 15rem;
+            padding:1.5rem;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &.left {
+            left:0;
+            background: url('../Assets/img/ps5\ 1.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left;
+            &::before {
+                content: '';
+                position:absolute;
+                width:100%;
+                height:100%;
+                background-color: $left-bg-color;
+            }
+            .btn {
+                &:hover {
+                    background-color:$left-btn-hover-color;
+                    border-color:$left-btn-hover-color;
+                }
+            }
+        }
+        &.right {
+            right:0;
+            background: url(../Assets/img/xbox\ 1.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left;
+            &::before {
+                content: '';
+                position:absolute;
+                width:100%;
+                height:100%;
+                background-color: $right-bg-color;
+            }
+            .btn {
+                &:hover {
+                    background-color: $right-btn-hover-color;
+                    border-color:$right-btn-hover-color ;
+                }
+            }
+        }
+
+    }
+    
+}
+.split.right, .split.left, .split.right::before, .split.left::before {
+    transition: all $speed ease-in-out;
+  }
+//   @media (max-width:800px) {
+//     h1 {
+//         font-size:2rem;
+//         top:30%;
+//     }
+
+//     .btn {
+//         width:12rem;
+//         padding:1.2rem;
+//     }
+//   }
