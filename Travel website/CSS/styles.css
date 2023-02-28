@@ -1,0 +1,413 @@
+/* common */
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: OpenSans;
+    src: url(../Assets/fonts/OpenSans.ttf);
+}
+@font-face {
+    font-family: Roboto;
+    src: url(../Assets/fonts/Roboto.ttf);
+}
+body {
+    font-family: Roboto;
+    background-color: #e9f2fa;
+}
+.center-cont {
+    width:1140px;
+    padding:0 20px;
+    margin:0 auto;
+}
+.d-flex {
+    display: flex;
+}
+.d-block {
+    display: block;
+}
+
+/* common */
+
+/* body */
+
+/* header1 */
+header {
+    width:100%;
+    padding:15px 0;
+    /* ამით სურათის ზევით განვათავსე header ან მენიუ */
+    position:absolute;
+    top:0;
+    left:0;
+}
+.header-inner {
+    display:flex;
+    justify-content: space-between;
+}
+header .menu {
+    list-style:none;
+}
+header .menu li {
+    display:inline-block;
+    padding:0 25px;
+}
+header a {
+    color:white;
+    text-decoration: none;
+    font-weight:bold;
+    text-transform: uppercase;
+}
+.header-inner .logo {
+    font-size:26px;
+}
+header a:hover {
+    text-decoration:underline;
+}
+header .menu li a {
+    font-size:14px;
+    
+}
+header .menu li:nth-child(2) a, header .menu li:nth-child(3) a {
+    cursor:not-allowed;
+}
+/* header1 */
+
+/* cover : this is inside the main image*/
+.cover {
+    width:100%;
+    height:735px;
+    background-image: url(../Assets/img/main.jpg);
+    background-size:1580px;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit:cover;
+}
+.cover-text {
+    color:white;
+    max-width:400px
+}
+.cover-cont {
+    height:100%;
+    display:flex;
+    align-items:center;
+}
+.cover-text h1 {
+    font-size:90px;
+}
+.cover-text p {
+    font-size:20px;
+    line-height:32px;
+    margin:25px 0 50px 0;   
+}
+.cover-text .btn {
+    /* display:block მოყვება თავისი რითაც მთლიან width მოიცავს */
+    display:inline;
+    padding:16px 24px;
+    font-size:16px;
+    background-image: linear-gradient(135deg, #478ac9, #24d9ea);
+    border-radius:8px;
+}
+.cover-text .btn a {
+    text-decoration: none;
+    color:white;
+}
+.cover-text .btn:hover {
+    transform: scale(0.77);
+}
+/* cover */
+
+
+/* places */
+.places {
+    margin-bottom: 50px;
+}
+.places > h1, .places > p {
+    text-align: center;
+    letter-spacing: 1px;
+}
+.places > h1 {
+    margin-top:40px;
+    font-family: OpenSans;
+    color:#478ac9;
+    font-size:40px;
+}
+.places > p {
+    margin:30px 0 90px 0;
+    font-family: OpenSans;
+    color:#4c7397;
+    font-size: 18px;
+} 
+.places-list {
+    display: grid;
+    /* 1fr თანაბრად აშორებს ორივე მხრიდან და თანაბარი ზომებით */
+    grid-template-columns: 1fr 1fr 1fr;
+    /* justify-content: space-between; gap ით ზუსტი დაშორებები შეგვიძლია განვსაზღვროთ*/
+    gap:30px; 
+}
+.places-card > img {
+    width:100%;
+    height:300px;
+    object-fit: cover;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.places-card > img:hover {
+    transform:scale(1.25);
+    transition: transform 0.8s;
+    border-radius: 10px;
+}
+.place-bottom {
+    background-color: white;
+    height:40px;
+}
+.place-bottom > img {
+    padding-top:5px;
+    width:30px;
+    height:30px;
+    /* vertical -alig გამოიყენება უშუალოდ სურათზე და გამოიყენება ტექსტთან შესაბამისი ზომა რომ ჰქონდეს */
+    vertical-align: middle;
+    /* https://isotropic.co/tool/hex-color-to-css-filter/ ამ ლინკზე შესაბამის ფერს ჩაწერ და ქვევით დააკოპირებ შესაბამის მასალას */
+    filter: invert(84%) sepia(71%) saturate(0%) hue-rotate(177deg) brightness(85%) contrast(80%);
+}
+.place-bottom > i {
+    height:20px;
+    margin-top:10px;
+    
+}
+
+/* browse */
+.browse-container {
+    width:100%;
+    height:calc(735px / 2);
+    display: flex;
+    align-items: center;
+    background-color: white;
+    display: block;
+    padding-top:20px;
+}
+.card-1 h1, .card-3 h1 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    height:30px;
+}
+.card-1 a, .card-2 a {
+    padding-bottom: 23px;
+    color:#4f8fcb;
+    text-decoration:none;
+}
+.card-1 a:hover, .card-2 a:hover {
+    text-decoration:underline;
+}
+.card-2 {
+    margin-top: 60px;
+}
+.card-3 p {
+    color:#a2a2a2;
+    margin-bottom: 40px;
+}
+.emailSend input {
+    width:180px;
+    height:30px;
+    border-radius: 8px;
+    border:0;
+    background-color: #f2f2f2;
+    padding-left:15px;
+    font-size:12px;
+    margin-bottom: 40px;
+}
+.emailSend button {
+    width:100px;
+    height:40px;
+    border-radius: 3px;
+    border:0.3px;
+    background-color: #478ac9;
+    color:white;
+    font-size: 16px;
+    cursor: pointer;
+}
+.emailSend button:focus {
+transform: scale(0.97);
+}
+.icons img {
+    width:22px;
+    height:22px;
+    margin-right:15px;
+    filter: invert(70%) sepia(4%) saturate(6%) hue-rotate(352deg) brightness(86%) contrast(88%);
+    cursor: pointer;
+}
+/* browse */
+/* Discount */
+.discount {
+    width:100%;
+    height:calc(735px / 2);
+    display: flex;
+    align-items: center;
+    background-image:url(../Assets/img/sanapiro-tyita-da-zgvit.jpeg);
+    background-size:1580px;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit:cover;
+    
+}
+.discount-container {
+    height:285px;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    color:white;
+}
+.discount-container h1 {
+    font-size: 34px;
+    margin-bottom:30px;
+}
+.discount-container p {
+    font-size: 20px;
+    margin-bottom:20px;
+    width:60%;
+    line-height: 1.6;
+    direction: rtl; 
+    /* direction rtl მარჯვნიდან მარცხნივ ჩაწერს ტექსტს */
+}
+.discount-container div {
+    width:150px;
+    height:50px;
+    border:1px white solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: inherit;
+    cursor: pointer;
+    
+}
+.discount-container div:hover  {
+    transform: scale(0.97);
+}
+/* discount */
+/* Why Choose Us */
+.choose {
+    background-color: #e9f2fa;
+}
+.choose h1 {
+    margin-top:80px;
+    color: black;
+    font-size:30px;
+    margin-bottom: 20px;
+    display: flex;
+    width:100%;
+    justify-content: center;
+}
+.choose p {
+    margin-bottom: 80px;
+    font-style: italic;
+    font-size:15px;
+    display: flex;
+    width:100%;
+    justify-content: center;
+}
+/* Why Choose Us */
+/* images-container */
+.images-container {
+    height:735px;
+    width:100%;
+}
+.images-container .gogona-saqanelaze  {
+    width:540px;
+    height:540px;
+    margin-right:20px;
+}
+.sz-img {
+    width:calc(540px / 2 - 10px);
+    height:calc(540px / 2 - 10px);
+    margin-bottom: 20px;
+}
+.sz-div {
+    width:calc(540px / 2 - 10px);
+    height:calc(540px / 2 - 10px);
+    background-color: white;
+    padding:0 20px;
+    margin-bottom:calc(20px + 4px);
+}
+.sz-div img {
+    width:38px;
+    height:38px;
+    margin-bottom:20px;
+}
+.sz-div h1 {
+    font-size:25px;
+    font-weight: 1;
+    margin-bottom:20px;
+}
+.sz-div p {
+    font-style:italic;
+    font-size:14px;
+}
+/* .same-size {
+    width:calc(25% - 20px);
+    height:calc(50% - 20px);
+    display: block;
+} */
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    margin-right:10px;
+}
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#location {
+    width:20px;
+    height:20px;
+}
+.beautiful h1 {
+    font-size: 20px;
+}
+/* images-container */
+
+/* footer */
+.footer-div1 {
+    width:100%;
+    height:250px;
+    background-color: #292e33;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:white;
+}
+.footer-div1 h1 {
+    margin-bottom: 40px;
+
+}
+.footer-div1 img {
+    width:20px;
+    height:20px;
+    margin-right: 15px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    filter: invert(95%) sepia(5%) saturate(20%) hue-rotate(249deg) brightness(106%) contrast(106%);
+    /* https://codepen.io/sosuke/pen/Pjoqqp ამ საიტიდან ხდება გადაყვანა */
+}
+.footer-div2 {
+    background-color: #333333;
+    width:100%;
+    height:70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#ffffff;
+    font-size: 14px;
+}
+.footer-div2 a {
+    color:#a0bbd5;
+    text-decoration: underline;
+    margin:0 5px;
+    cursor: pointer;
+}
+
+/* footer */
+/* body */
