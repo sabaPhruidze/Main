@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'FredokaOne';
+    src: url(../fonts/FredokaOne-Regular.ttf);
+}
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+body {
+    overflow: hidden;
+    background-color: black;
+    font-family: 'FredokaOne';
+    color:white;
+}
+h1 {
+    padding-top:30px;
+    padding-bottom:50px;
+    height:30px;
+    
+    text-align: center;
+}
+.container {
+    display: flex;
+    align-items: center;
+    width:100vw;
+    height:calc(100vh - 90px);
+    margin:0 30px;
+}
+.panel {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1200px;
+    box-sizing: cover;
+    width:80px;
+    height:600px;
+    border-radius: 50px;
+    border:1px rgb(189, 183, 183) solid;
+    margin-right:30px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 1s;
+}
+.panel.active {
+    width:1000px;
+    cursor:not-allowed;
+}
+.panel h3 {
+    margin:550px 0px 0 30px;
+    font-size:30px;
+    transition: 2s;
+    opacity:0;
+}
+.panel.active h3 {
+    opacity:1;
+}
