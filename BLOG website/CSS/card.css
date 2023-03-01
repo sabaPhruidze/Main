@@ -1,0 +1,73 @@
+/* დასასრულებელი მაქვს */
+@import url(../CSS/blog-style.css);
+.card {
+    box-shadow: 0 0 3px 4px rgba(60, 61, 62, 0.126);
+}
+.img-container {
+    position:relative;
+    /* ვიყენებთ რომ არ გაცდეს img-containerს არ გაცდეს heart ი */
+}
+.card .img-container .card-img {
+    width:100%;
+    height:180px;
+    display: block;
+    object-fit: cover;
+    /* ზედა სურათი ანუ ეს უნდა ყოფილიყო block თავდაპირველად კი inline იმისათვის რომ ჩარჩო ზუსტად ჰქონოდა მისადაგებული */
+}
+.card .img-container .fav-img {
+    position:absolute;
+    top:20px;
+    right:20px;
+    width:20px;
+    height:20px;
+    cursor: pointer;
+    filter: invert(99%) sepia(99%) saturate(0%) hue-rotate(258deg) brightness(103%) contrast(100%);
+}
+.card .img-container span {
+    position: absolute;
+    right:10px;
+    bottom:10px;
+    color:white;
+    font-size: 16px;
+    
+}
+.card h3 {
+    font-size:20px;
+    margin-top:0;
+    margin-bottom:15px;
+}
+.card p {
+margin-top:0;
+height:63px;
+overflow: hidden;
+}
+.action-container {
+    justify-content: space-between;
+    align-items: center;
+    margin-top:5px;
+    
+}
+.action-container img {
+    width:15px;
+    height:15px;
+    transform: translateY(10%);
+}
+.action-container img:hover {
+    cursor: pointer;
+}
+.action-container button {
+    width:120px;
+    height:30px;
+    background-color:var(--hf-color);
+    border: 0;
+    color:white;
+    font-size:16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.card-body {
+    border:1px rgba(0, 0, 0, 0.551) solid;
+    border-top:0px;
+    padding:10px 10px 15px 10px;
+    height:210px;
+}

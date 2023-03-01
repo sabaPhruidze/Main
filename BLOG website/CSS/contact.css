@@ -1,0 +1,52 @@
+
+.container.contact {
+    width:1400px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-content: space-around;
+    overflow: hidden;
+    
+}
+
+.container.contact h1, .container.contact h2 {
+    margin-bottom: 20px;
+}
+.container.contact p {
+    margin-bottom: 15px;
+}
+.container.contact label {
+    display: block;
+    font-weight: bold;
+    margin-bottom:5px;
+}
+.container.contact input, .container.contact textarea {
+    width:75%;
+    box-sizing: border-box;
+    height: 40px;
+    border: 1px black solid;
+    padding: 0 15px;
+    outline:none;
+    font-size: 16px;
+    margin-bottom:15px;
+}
+.container.contact textarea {
+    height:100px;
+    /* ამის height გავრცელდება */
+    padding-bottom:15px;
+}
+.container.contact ul li {
+    list-style-position: inside;
+}
+.btn {
+    width:90px;
+    height:40px;
+    background-color:var(--hf-color);
+    color:white;
+    border:0;
+}
+.btn:active {
+    transform: scale(0.96);
+}
+.btn:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>რეგისტრაცია</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/header-footer.css">
+</head>
+<body>
+    <header class="flex">
+        <div class="header-container">
+            <a href="">
+                <img src="../Assets/icon/bridge-solid.svg" alt="" class="logo">
+            </a>
+            <nav class="flex">
+                <div>
+                    <a href="blog-list.html">მთავარი</a>
+                    <a href="">დახმარება</a>
+                    <a href="blog-list.html">ბლოგი</a>
+                    <a href="">წესები</a>
+                    <a href="contact.html">კონტაქტი</a>
+                </div>
+                <div>
+                    <a href="registration.html">რეგისტრაცია</a>
+                    <a href="author.html">შესვლა</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <form>
+            <div class="firstName mb-20">
+                <label for="f-name" class="f-name">სახელი</label>
+                <input type="text" id="f-name" class="common-input">
+            </div>
+            <div class="lastName mb-20">
+                <label for="l-name">გვარი</label>
+                <input type="text" id="l-name" class="common-input">
+            </div>
+            <div class="birthday mb-20">
+                <label for="birth">გვარი</label>
+                <input type="date" id="birth" class="common-input">
+            </div>
+            <div class="location mb-20">
+                <label for="loc">დაბადების ადგილი</label>
+                <select class="common-input" id="loc">
+                    <option value="">საქართველო</option>
+                    <option value="">გერმანია</option>
+                    <option value="">იაპონია</option>
+                    <option value="">ამერიკა</option>
+                    <option value="">რუსეთი</option>
+                </select>
+            </div>
+            <div class="flex mb-20 gender">
+                <div>
+                    <input type="radio" id="gender-male" name="gender">
+                    <label for="gender-male">მამრობითი</label>
+                </div>
+                <div>
+                    <input type="radio" id="gender-female" name="gender">
+                    <label for="gender-female">მდედრობითი</label>
+                </div>
+            </div>
+            <div class="email mb-20">
+                <label for="mail">ელ-ფოსტა</label>
+                <input type="email" id="mail" class="common-input">
+            </div>
+            <div class="password mb-20">
+                <label for="pass">პაროლი</label>
+                <input type="password" id="pass" class="common-input">
+            </div>
+            <div class="password-again mb-20">
+                <label for="passagain">გაიმეორეთ პაროლი</label>
+                <input type="password" id="passagain" class="common-input">
+            </div>
+            <div class="email mb-20">
+                <input type="checkbox" id="remember" class="">
+                <label for="remember">გაიმეორეთ პაროლი</label>
+            </div>
+            <button class="common-input mb-20 btn">რეგისტრაცია</button>
+            <div class="lastA">
+                <a href="author.html">ავტორიზაცია</a>
+                </div>
+        </form>
+    </div>
+    <div class="mb-30"></div>
+    <footer class="flex">
+        <div>
+            <a href="blog-list.html">მთავარი</a>
+            <a href="contact.html">კონტაქტი</a>
+            <a href="">სამომხმარებლო შეთანხმება</a>
+            <a href="">კოფედენციალურობის პოლიტიკა</a>
+        </div>
+        <div>
+            <img src="../Assets/icon/gg.svg" alt="" id="gg">
+            <a href="blog-list.html">2023 r3g1st3r.ca</a>
+        </div>
+    </footer>
+</body>
+</html>
