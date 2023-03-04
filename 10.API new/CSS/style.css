@@ -1,0 +1,46 @@
+@font-face {
+  font-family: robotoBold;
+  src: url(../Assets/fonts/Roboto-Bold.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: robotoBold;
+  background-color: #00c6FB;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.key {
+  border: 1px solid #9cc3e8;
+  border-radius: 10px;
+  background-color: #005BEA;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+  display: inline-flex;
+  font-size: 25px;
+  padding: 40px 60px;
+  flex-direction: column;
+  margin: 10px;
+  font-weight: 500;
+  min-width: 250px;
+  position: relative;
+  color: white;
+}
+.key small {
+  position: absolute;
+  top: -25px;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  color: #e9f1f1;
+  font-size: 16px;
+}/*# sourceMappingURL=style.css.map */
