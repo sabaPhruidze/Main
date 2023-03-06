@@ -2,6 +2,7 @@
 @import url(../CSS/blog-style.css);
 .card {
     box-shadow: 0 0 3px 4px rgba(60, 61, 62, 0.126);
+    width:300px;
 }
 .img-container {
     position:relative;
