@@ -3,4 +3,4 @@ here are some projects made by HTML/CSS/JS/JQUERY/SASS .Some of them is made by 
 I am ready to get any remark so contact me any time on my Email: sabaphruidze01@gmail.com
 
 In detail:
-1-8 are made by HTML/CSS/JS/JQUERY/SASS . travel website is made by CSS/HTML/JS .Blog website is made by CSS/HTML
+1-11 are made by HTML/CSS/JS/JQUERY/SASS . travel website is made by CSS/HTML/JS .Blog website is made by CSS/HTML
