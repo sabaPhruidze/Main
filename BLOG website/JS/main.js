@@ -13,3 +13,18 @@ headers.forEach((header, idx) => {
     })
   })
 })
+
+function sendContact() {
+axios.post('https://coding-world.com/back/public/api/fake-contact/add', {
+  name: nameInput.value,
+  email:email.value,
+  text:text.value,
+})
+.then(function (response) {
+  console.log(response);
+})
+.catch(function (error) {
+  console.log(error);
+});
+alert("თქვენი შეტყობინება წარმატებით გაიგზავნა")
+}
