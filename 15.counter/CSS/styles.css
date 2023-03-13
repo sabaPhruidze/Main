@@ -1,0 +1,52 @@
+@font-face {
+  font-family: FredokaOne;
+  src: url(../fonts/FredokaOne-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: FredokaOne;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #746;
+  color: white;
+}
+
+.counter-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 30px 50px;
+  text-align: center;
+}
+.counter-container .youtube {
+  color: red;
+}
+.counter-container .twitter {
+  color: rgb(54, 143, 177);
+}
+.counter-container .facebook {
+  color: rgb(31, 52, 211);
+}
+.counter-container .counter {
+  font-size: 60px;
+  margin-top: 10px;
+  text-align: center;
+}
+.counter-container span {
+  white-space: nowrap;
+}
+
+@media (max-width: 650px) {
+  body {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=styles.css.map */
